@@ -1,0 +1,81 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+#photoPreview {
+    width: 100%;
+    height: auto;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    .page-item {
+        margin: 0 4px;
+    }
+
+    .page-link {
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    .active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+    }
+}
+
+#backToTopBtn {
+    position: fixed;
+    right: -50%;
+    bottom: 10%;
+}
+
+#backToTopBtn i {
+    color: blue;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    animation: bttGlow 1s infinite linear;
+}
+
+@keyframes bttGlow {
+    from {
+        color: blue;
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    }
+
+    to {
+        color: red;
+        text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    }
+}
+
+@keyframes bttShow {
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: 10%;
+    }
+}
+
+@keyframes bttHide {
+    from {
+        right: 10%;
+    }
+
+    to {
+        right: -50%;
+    }
+}
